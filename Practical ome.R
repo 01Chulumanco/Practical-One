@@ -30,3 +30,7 @@ Design    = cbind(1,Data_cars$speed)
 beta = solve(t(Design)%*%Design)%*%t(Design)%*%Response
 
 beta
+
+
+model = lm(dist~speed,Data_cars)
+summary(model)
