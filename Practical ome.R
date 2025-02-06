@@ -15,3 +15,18 @@ sd_temp  = sd(airquality$Temp,na.rm=TRUE)
 #Find maximum values
 max_ozone = max(airquality$ozone,na.rm=TRUE)
 max_temp  = max(airquality$Temp,na.rm=TRUE)
+
+data("cars")
+Data_cars = data.frame(cars)
+
+#The response variable
+Response  = as.vector(Data_cars$dist)
+
+#The design matrix
+Design    = cbind(1,Data_cars$speed)
+
+#Calculate beta
+
+beta = solve(t(Design)%*%Design)%*%t(Design)%*%Response
+
+beta
