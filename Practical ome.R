@@ -11,3 +11,7 @@ mean_temp  = mean(airquality$Temp,na.rm=TRUE)
 #Calculate standard deviations
 sd_ozone = sd(airquality$Ozone,na.rm=TRUE)
 sd_temp  = sd(airquality$Temp,na.rm=TRUE)
+
+#Find maximum values
+max_ozone = max(airquality$ozone,na.rm=TRUE)
+max_temp  = max(airquality$Temp,na.rm=TRUE)
